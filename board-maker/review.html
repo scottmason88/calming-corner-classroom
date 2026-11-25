@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topic Review</title>
+<!--
+  Review sheet for the topic starter boards in topics.json. A teacher looks at
+  each board, plays its words, and marks it Approve or Needs changes with a
+  comment. Decisions stay in this browser until "Export decisions" saves them
+  as a small JSON file; scripts/apply-topic-review.mjs folds that file into
+  topics.json. Nothing is sent anywhere.
+-->
+<style>
+  :root {
+    --ink: #1f2328; --muted: #5d6670; --line: #d5dae0; --page: #eef1f4; --panel: #fff;
+    --accent: #2f6fde; --ok: #1a7f37; --warn: #b42318; --grid: #2b2f36;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  button, input, textarea { font: inherit; color: inherit; }
+  button { border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 7px 12px; cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  header.top {
+    position: sticky; top: 0; z-index: 2; background: var(--panel); border-bottom: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 12px 20px;
+  }
+  header.top h1 { font-size: 19px; margin: 0; }
+  header.top label { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; }
+  header.top input { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; width: 180px; }
+  .progress { color: var(--muted); font-size: 14px; }
+  .spacer { flex: 1; }
+  main { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; gap: 24px; }
+  .intro { background: var(--panel); border-radius: 12px; padding: 16px 20px; line-height: 1.5; }
+  .intro p { margin: 0 0 8px; }
+  .intro p:last-child { margin: 0; }
+  article { background: var(--panel); border-radius: 12px; padding: 18px 20px; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+  article h2 { margin: 0; font-size: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .blurb { color: var(--muted); margin: 4px 0 10px; }
+  .badge { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 8px; }
+  .badge.draft { background: #fff4d6; color: #7a4d00; border: 1px solid #f0c674; }
+  .badge.needs-changes { background: #fde8e7; color: #9b1c13; border: 1px solid #f2a29c; }
+  .badge.approved { background: #e3f5e8; color: #1a6b33; border: 1px solid #94d3a8; }
+  .notes { font-size: 14px; background: #f6f8fa; border-left: 4px solid #f0c674; padding: 8px 12px; margin: 0 0 12px; border-radius: 4px; }
+  .notes ul { margin: 4px 0 0; padding-left: 18px; }
+  .grid { display: grid; gap: 2px; background: var(--grid); border: 2px solid var(--grid); border-radius: 6px; overflow: hidden; }
+  .cell { position: relative; display: grid; grid-template-rows: 64px auto auto; justify-items: center; align-items: center; gap: 2px; padding: 6px 4px; min-width: 0; text-align: center; }
+  .cell img { width: 100%; height: 64px; object-fit: contain; }
+  .cell .label { font-weight: 700; font-size: 15px; line-height: 1.1; overflow-wrap: anywhere; }
+  .cell .meta { font-size: 11px; color: var(--muted); line-height: 1.2; overflow-wrap: anywhere; }
+  .cell.core { opacity: 0.6; }
+  .cell.empty { background: #f5f6f8; }
+  .cell .play { position: absolute; top: 3px; right: 3px; width: 28px; height: 28px; padding: 0; border-radius: 50%; font-size: 12px; background: rgba(255,255,255,.9); }
+  .cell .noclip { position: absolute; top: 4px; left: 4px; font-size: 10px; font-weight: 700; color: #7a4d00; background: #fff4d6; border-radius: 4px; padding: 1px 4px; }
+  .legend { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+  .decision { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px 16px; margin-top: 14px; align-items: start; }
+  .choices { display: grid; gap: 6px; }
+  .choices label { display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+  .choices label:has(input:checked) { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); }
+  .choices input { width: 18px; height: 18px; margin: 0; }
+  textarea { width: 100%; min-height: 84px; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; resize: vertical; }
+  .saved { font-size: 12px; color: var(--muted); grid-column: 2; margin-top: -6px; }
+  .status { font-size: 14px; }
+  .changed { font-size: 14px; color: var(--warn); font-weight: 600; margin: 10px 0 0; }
+  .core-note { border-left: 4px solid #f0c674; }
+  .status.warn { color: var(--warn); }
+  @media (max-width: 700px) {
+    .decision { grid-template-columns: 1fr; }
+    .saved { grid-column: 1; }
+    .cell { grid-template-rows: 40px auto; }
+    .cell img { height: 40px; }
+    .cell .meta { display: none; }
+    .cell .label { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Topic starters: teacher review</h1>
+  <label>Your name <input id="reviewer" type="text" autocomplete="name" maxlength="60"></label>
+  <span class="progress" id="progress"></span>
+  <span class="spacer"></span>
+  <span class="status" id="status" role="status"></span>
+  <button type="button" class="primary" id="export">Export decisions</button>
+</header>
+
+<main id="main">
+  <section class="intro">
+    <p>These boards were drafted with AI, and the pictures were chosen by hand from the Mulberry and OpenMoji sets. None of them reaches children as "checked" until a teacher approves it here.</p>
+    <p>For each board, look at the pictures, tap ▶ to hear a word, and choose <strong>Approve</strong> or <strong>Needs changes</strong>. Say what to change in the comment box: a better word, a picture that doesn't read well, a missing word. Greyed squares are the core words, which stay in the same places on every board.</p>
+    <p>Your choices are saved in this browser as you go. When you're done, type your name at the top, tap <strong>Export decisions</strong>, and send the file it saves. Each export only carries the decisions you haven't exported yet.</p>
+  </section>
+</main>
+
+<script type="module">
+import { CATEGORIES } from './templates.js'
+import { fingerprint, topicStatus } from './fingerprint.js'
+
+const STORE = 'board-maker:review:v1'
+const CORE = new Set(['I', 'want', 'see', 'in', 'more', 'you', 'put', 'help', 'on', 'finished', 'he, she, it', 'turn', 'Go', 'Stop', 'no/not'])
+const BADGES = { draft: 'Draft', 'needs-changes': 'Needs changes', approved: 'Approved' }
+const colorOf = Object.fromEntries(CATEGORIES.map((c) => [c.key, c.color]))
+const nameOf = Object.fromEntries(CATEGORIES.map((c) => [c.key, c.name]))
+const $ = (id) => document.getElementById(id)
+
+const slugify = (t) => String(t).toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+function pictureURL(id) {
+  if (id?.startsWith('m:')) return `library/mulberry/${encodeURIComponent(id.slice(2))}.svg`
+  if (id?.startsWith('o:')) return `library/openmoji/${encodeURIComponent(id.slice(2))}.svg`
+  return null
+}
+
+let state = { reviewer: '', decisions: {} }
+try {
+  const raw = localStorage.getItem(STORE)
+  if (raw) state = { reviewer: '', decisions: {}, ...JSON.parse(raw) }
+} catch { /* private window or blocked storage: decisions last until the page closes */ }
+
+function save() {
+  try {
+    localStorage.setItem(STORE, JSON.stringify(state))
+    return true
+  } catch {
+    $('status').textContent = 'This browser cannot save your choices. Export them before closing the page.'
+    $('status').classList.add('warn')
+    return false
+  }
+}
+
+let topics = []
+function progress() {
+  const done = topics.filter((t) => state.decisions[t.key]?.decision).length
+  $('progress').textContent = `${done} of ${topics.length} reviewed`
+}
+
+let audio = null
+function play(text, hasClip) {
+  audio?.pause()
+  window.speechSynthesis?.cancel()
+  if (hasClip) {
+    audio = new Audio(`voices/calm/${slugify(text)}.mp3`)
+    audio.play().catch(() => {})
+  } else if (window.speechSynthesis) {
+    const u = new SpeechSynthesisUtterance(text)
+    u.rate = 0.9
+    window.speechSynthesis.speak(u)
+  }
+}
+
+function render(t, library, voices) {
+  const a = document.createElement('article')
+  a.id = `topic-${t.key}`
+  a.dataset.topic = t.key
+  const h = document.createElement('h2')
+  h.textContent = t.name
+  const badge = document.createElement('span')
+  const status = topicStatus(t)
+  badge.className = `badge ${status}`
+  badge.textContent = BADGES[status]
+  h.appendChild(badge)
+  const blurb = document.createElement('p')
+  blurb.className = 'blurb'
+  blurb.textContent = t.blurb
+  a.append(h, blurb)
+
+  if (t.notes) {
+    const notes = document.createElement('div')
+    notes.className = 'notes'
+    const parts = t.notes.split(/(?<=\.)\s+(?=Picture for )/)
+    notes.textContent = parts[0]
+    if (parts.length > 1) {
+      const ul = document.createElement('ul')
+      for (const p of parts.slice(1)) {
+        const li = document.createElement('li')
+        li.textContent = p.replace(/^Picture for /, 'Picture for “').replace(/: /, '”: ')
+        ul.appendChild(li)
+      }
+      notes.appendChild(ul)
+    }
+    a.appendChild(notes)
+  }
+
+  const b = t.board
+  const grid = document.createElement('div')
+  grid.className = 'grid'
+  grid.style.gridTemplateColumns = `repeat(${b.cols}, minmax(0, 1fr))`
+  b.cells.slice(0, b.rows * b.cols).forEach((c) => {
+    const cell = document.createElement('div')
+    cell.className = 'cell'
+    if (!c || !c.label) {
+      cell.classList.add('empty')
+      grid.appendChild(cell)
+      return
+    }
+    if (CORE.has(c.label)) cell.classList.add('core')
+    cell.style.background = colorOf[c.category] || '#fff'
+    const say = c.say || c.label
+    const hasClip = voices.has(slugify(say))
+    const img = document.createElement('img')
+    img.alt = ''
+    img.loading = 'lazy'
+    if (pictureURL(c.picture)) img.src = pictureURL(c.picture)
+    const entry = library.get(c.picture)
+    const label = document.createElement('span')
+    label.className = 'label'
+    label.textContent = c.label
+    const meta = document.createElement('span')
+    meta.className = 'meta'
+    meta.textContent = `${say !== c.label ? `“${say}” · ` : ''}${nameOf[c.category] || ''}`
+    cell.title = `Picture: ${entry ? entry[1] : c.picture} (${c.picture?.startsWith('m:') ? 'Mulberry' : 'OpenMoji'})`
+    const btn = document.createElement('button')
+    btn.type = 'button'
+    btn.className = 'play'
+    btn.textContent = '▶'
+    btn.setAttribute('aria-label', `Play “${say}”`)
+    btn.addEventListener('click', () => play(say, hasClip))
+    cell.append(img, label, meta, btn)
+    if (!hasClip) {
+      const flag = document.createElement('span')
+      flag.className = 'noclip'
+      flag.textContent = 'device voice'
+      flag.title = 'No clip in the Calming Corner voice yet: the device voice reads it.'
+      cell.appendChild(flag)
+    }
+    grid.appendChild(cell)
+  })
+  a.appendChild(grid)
+  const legend = document.createElement('p')
+  legend.className = 'legend'
+  legend.textContent = 'Hover a square to see the picture’s name. “device voice” means there is no recorded clip yet.'
+  a.appendChild(legend)
+
+  /* A choice made about an earlier version of this board no longer counts. */
+  const print = fingerprint(t.board)
+  const stale = state.decisions[t.key]?.fingerprint && state.decisions[t.key].fingerprint !== print
+  if (stale) {
+    state.decisions[t.key] = { comment: state.decisions[t.key].comment || '' }
+    save()
+    const changed = document.createElement('p')
+    changed.className = 'changed'
+    changed.textContent = 'This board has changed since your last choice. Please look at it again.'
+    a.appendChild(changed)
+  }
+  const mine = state.decisions[t.key] || {}
+  const decision = document.createElement('div')
+  decision.className = 'decision'
+  const choices = document.createElement('div')
+  choices.className = 'choices'
+  choices.setAttribute('role', 'radiogroup')
+  choices.setAttribute('aria-label', `Decision for ${t.name}`)
+  const saved = document.createElement('div')
+  saved.className = 'saved'
+  const stamp = () => {
+    const d = state.decisions[t.key]
+    saved.textContent = d?.sent
+      ? `Exported ${new Date(d.sent).toLocaleString()}`
+      : d?.at ? `Saved ${new Date(d.at).toLocaleString()}, not exported yet` : ''
+  }
+  const update = (patch) => {
+    state.decisions[t.key] = { ...state.decisions[t.key], ...patch, fingerprint: print, at: new Date().toISOString(), sent: null }
+    save()
+    stamp()
+    progress()
+  }
+  for (const [value, text] of [['approved', 'Approve'], ['needs-changes', 'Needs changes']]) {
+    const label = document.createElement('label')
+    const input = document.createElement('input')
+    input.type = 'radio'
+    input.name = `decision-${t.key}`
+    input.value = value
+    input.checked = mine.decision === value
+    input.addEventListener('change', () => update({ decision: value }))
+    label.append(input, document.createTextNode(text))
+    choices.appendChild(label)
+  }
+  const comment = document.createElement('textarea')
+  comment.placeholder = 'Comments: words to change, pictures that don’t read well, anything missing…'
+  comment.value = mine.comment || ''
+  comment.setAttribute('aria-label', `Comments on ${t.name}`)
+  comment.addEventListener('input', () => update({ comment: comment.value }))
+  decision.append(choices, comment, saved)
+  a.appendChild(decision)
+  stamp()
+  return a
+}
+
+$('reviewer').value = state.reviewer
+$('reviewer').addEventListener('input', (e) => { state.reviewer = e.target.value; save() })
+
+function say(text, warn = false) {
+  $('status').textContent = text
+  $('status').classList.toggle('warn', warn)
+}
+
+$('export').addEventListener('click', () => {
+  if (!state.reviewer.trim()) {
+    say('Type your name first, so the decisions are signed.', true)
+    $('reviewer').focus()
+    return
+  }
+  const decisions = {}
+  for (const t of topics) {
+    const d = state.decisions[t.key]
+    if (!d || d.sent || !(d.decision || d.comment)) continue
+    decisions[t.key] = { decision: d.decision || null, comment: (d.comment || '').trim(), at: d.at, fingerprint: d.fingerprint }
+  }
+  const keys = Object.keys(decisions)
+  if (!keys.length) {
+    say('Nothing new to export: every decision has already been exported.')
+    return
+  }
+  const exportedAt = new Date().toISOString()
+  const out = { kind: 'board-maker-topic-review', version: 2, reviewer: state.reviewer.trim(), exportedAt, decisions }
+  const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' })
+  const a = document.createElement('a')
+  a.href = URL.createObjectURL(blob)
+  a.download = `topic-review-${new Date().toISOString().slice(0, 10)}.json`
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  setTimeout(() => URL.revokeObjectURL(a.href), 10000)
+  /* Mark them sent, so the next export only carries new or changed decisions. */
+  for (const key of keys) state.decisions[key].sent = exportedAt
+  save()
+  for (const key of keys) document.querySelector(`#topic-${key} .saved`).textContent = `Exported ${new Date(exportedAt).toLocaleString()}`
+  say(`Exported ${keys.length} decision${keys.length === 1 ? '' : 's'}.`)
+})
+
+async function start() {
+  const [data, lib, clips] = await Promise.all([
+    fetch('topics.json').then((r) => r.json()),
+    fetch('library/index.json').then((r) => (r.ok ? r.json() : []), () => []),
+    fetch('voices/calm/index.json').then((r) => (r.ok ? r.json() : []), () => []),
+  ])
+  topics = data.topics || []
+  if (data.core?.notes) {
+    const card = document.createElement('section')
+    card.className = 'intro core-note'
+    card.innerHTML = '<p><strong>Core words, on every board:</strong> <span></span></p>'
+    card.querySelector('span').textContent = data.core.notes
+    $('main').appendChild(card)
+  }
+  const library = new Map(lib.map((e) => [e[0], e]))
+  const voices = new Set(clips)
+  for (const t of topics) $('main').appendChild(render(t, library, voices))
+  progress()
+  document.documentElement.dataset.ready = 'true'
+}
+start().catch((err) => {
+  $('status').textContent = `The review sheet could not load: ${err.message}. Open it through the board maker's web server.`
+  $('status').classList.add('warn')
+})
+</script>
+</body>
+</html>

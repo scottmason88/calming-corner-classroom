@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calming Corner Classroom Tools</title>
+<meta name="description" content="Free, offline-friendly talk boards and floating talk buttons for classrooms.">
+<style>
+  :root { --ink: #1f2328; --soft: #5b6470; --page: #f4f6f8; --card: #ffffff; --line: #d9dee4; --accent: #2f6fde; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #e8ebef; --soft: #a5adb8; --page: #15181c; --card: #1e2227; --line: #333a42; --accent: #7aa7f5; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 17px/1.5 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 920px; margin: 0 auto; padding: 48px 16px 32px; }
+  h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 8px; }
+  .lead { color: var(--soft); margin: 0 0 32px; max-width: 640px; }
+  .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .tool { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; color: inherit; text-decoration: none; }
+  .tool:hover, .tool:focus-visible { border-color: var(--accent); outline: none; }
+  .tool h2 { margin: 0 0 6px; font-size: 22px; color: var(--accent); }
+  .tool p { margin: 0; color: var(--soft); }
+  .more { margin-top: 28px; color: var(--soft); }
+  .more a { color: var(--accent); }
+  footer { margin-top: 40px; font-size: 13px; color: var(--soft); }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Calming Corner Classroom Tools</h1>
+  <p class="lead">Talk boards and talking buttons for the classroom. No accounts, nothing to install, and nothing you make is sent anywhere. It all stays in your browser.</p>
+  <div class="tools">
+    <a class="tool" href="board-maker/">
+      <h2>Board Maker</h2>
+      <p>Make a tap-to-talk board from a template or a classroom topic, then download it as one file that works offline on the classroom board.</p>
+    </a>
+    <a class="tool" href="book-maker/">
+      <h2>Book Buttons</h2>
+      <p>Make talking picture buttons for an adapted book, using pictures from the book, in a window that floats over the activity.</p>
+    </a>
+  </div>
+  <p class="more">Teachers checking the topic boards: <a href="board-maker/review.html">open the review sheet</a>.</p>
+  <footer>
+    Pictures: <a href="https://mulberrysymbols.org">Mulberry Symbols</a> by Steve Lee and <a href="https://openmoji.org">OpenMoji</a>, both
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Voice from Calming Corner.
+  </footer>
+</main>
+</body>
+</html>

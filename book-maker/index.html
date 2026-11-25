@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Maker · Calming Corner</title>
+<link rel="stylesheet" href="maker.css">
+<script type="module" src="maker.js"></script>
+</head>
+<body>
+<header class="top">
+  <h1>Book Maker</h1>
+  <label class="title-field">Activity <input id="title" maxlength="80" autocomplete="off" placeholder="My adapted book"></label>
+  <div class="actions">
+    <button type="button" id="new">New</button>
+    <button type="button" id="open" title="Open a downloaded panel (.html) or button sets (.json)">Open…</button>
+    <button type="button" id="import" title="Add the button sets from another file to this activity">Import sets…</button>
+    <button type="button" id="export" title="Save the button sets as a .json file for the browser extension">Export sets</button>
+    <label class="check"><input type="checkbox" id="show-core" checked> Core words</label>
+    <label class="check"><input type="checkbox" id="show-sentence" checked> Sentence bar</label>
+    <button type="button" id="try">Try it</button>
+    <button type="button" id="print">Print</button>
+    <button type="button" id="download" class="primary">Download panel</button>
+  </div>
+  <input type="file" id="open-file" accept=".html,.htm,.json,text/html,application/json" hidden>
+  <input type="file" id="import-file" accept=".html,.htm,.json,text/html,application/json" hidden>
+</header>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+
+<div class="work">
+  <nav class="sets" aria-labelledby="sets-heading">
+    <h2 id="sets-heading">Button sets</h2>
+    <p class="help">One set per page of the book, or one for the whole book. Children step through them with the big arrows; a set with more than 12 buttons shows 12 at a time.</p>
+    <ol id="sets"></ol>
+    <button type="button" id="add-set">+ Add a set</button>
+  </nav>
+
+  <section class="editor">
+    <div class="set-head">
+      <label>Set name <input id="set-name" maxlength="80" autocomplete="off"></label>
+      <button type="button" id="move-up" title="Move this set earlier">↑</button>
+      <button type="button" id="move-down" title="Move this set later">↓</button>
+      <button type="button" id="delete-set" class="danger">Delete set</button>
+    </div>
+    <ul class="cards" id="buttons"></ul>
+    <div class="how" id="how">
+      <h2>How it works</h2>
+      <ol>
+        <li>Open the book or activity in its own tab or app (Google Slides, PowerPoint, a PDF). It stays exactly as it is.</li>
+        <li><b>Grab pictures</b> from it: pick its tab or window, then drag a box around a picture.</li>
+        <li>Make buttons with those pictures, a word, what it says and a colour, set by set.</li>
+        <li><b>Download panel</b>, open the file, and tap <b>Float</b>. The buttons stay on top of the activity in their own small window.</li>
+      </ol>
+    </div>
+  </section>
+
+  <aside class="side">
+    <h2>Pictures you grabbed</h2>
+    <p class="help">Pictures cut from a frozen picture of the activity. Nothing is ever changed in the activity itself.</p>
+    <button type="button" id="grab" class="primary">Grab pictures…</button>
+    <div class="tray" id="tray"></div>
+  </aside>
+</div>
+
+<dialog id="grab-dialog" class="grab" aria-labelledby="grab-heading">
+  <div class="grab-bar">
+    <h2 id="grab-heading">Drag a box around a picture</h2>
+    <span class="small" id="grab-hint">Each box becomes a picture you can use for a button.</span>
+    <button type="button" id="grab-again">Grab again</button>
+    <button type="button" id="grab-done" class="primary">Done</button>
+  </div>
+  <div class="grab-stage" id="grab-stage">
+    <div class="grab-box" id="grab-box"><canvas id="grab-canvas"></canvas><div class="sel" id="grab-sel" hidden></div></div>
+  </div>
+  <div class="grab-cuts" id="grab-cuts"></div>
+</dialog>
+
+<dialog id="item-dialog" aria-labelledby="item-heading">
+  <form method="dialog" class="item-form">
+    <header>
+      <h2 id="item-heading">Button</h2>
+      <button value="close" class="close" aria-label="Close">✕</button>
+    </header>
+    <div class="cols">
+      <div class="fields">
+        <label>Word on the button <input id="item-label" maxlength="80" autocomplete="off"></label>
+        <label>What it says <input id="item-say" maxlength="300" autocomplete="off"></label>
+        <fieldset>
+          <legend>Colour</legend>
+          <div class="cats" id="item-cats"></div>
+        </fieldset>
+        <div class="voice">
+          <p class="voice-status" id="voice-status"></p>
+          <button type="button" id="voice-play">▶ Hear it</button>
+          <button type="button" id="voice-record">● Record</button>
+          <button type="button" id="voice-remove" class="link" hidden>Remove recording</button>
+        </div>
+      </div>
+      <div class="picture">
+        <div class="current"><div id="item-pic" class="pic"></div><span id="item-pic-name"></span></div>
+        <div class="tabs" role="tablist">
+          <button type="button" role="tab" id="tab-grabbed" aria-selected="true">Grabbed</button>
+          <button type="button" role="tab" id="tab-library" aria-selected="false">Picture library</button>
+        </div>
+        <div id="pane-grabbed" class="pane">
+          <div class="grid" id="grabbed-pics"></div>
+          <button type="button" id="item-grab">Grab from the activity…</button>
+        </div>
+        <div id="pane-library" class="pane" hidden>
+          <input id="lib-search" type="search" placeholder="Search pictures, e.g. scarf" autocomplete="off">
+          <div class="grid lib" id="lib-results" role="listbox"></div>
+          <p class="small">Mulberry Symbols and OpenMoji, CC BY-SA 4.0.</p>
+        </div>
+        <div class="pic-actions">
+          <button type="button" id="pic-upload">Upload a picture…</button>
+          <button type="button" id="pic-none" class="link">No picture</button>
+          <input type="file" id="pic-file" accept="image/*" hidden>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <button type="button" id="item-delete" class="danger">Delete</button>
+      <button value="done" class="primary">Done</button>
+    </footer>
+  </form>
+</dialog>
+
+<dialog id="try-dialog" class="try">
+  <div class="try-bar">
+    <label>Shape
+      <select id="shape">
+        <option value="1200x300">Floating strip</option>
+        <option value="340x900">Floating column</option>
+        <option value="1366x768">Whole screen (laptop)</option>
+        <option value="1024x768">Whole screen (iPad)</option>
+      </select>
+    </label>
+    <span class="small">This is how children will see the buttons. Tap them to hear them.</span>
+    <button type="button" id="try-close" class="primary">Back to editing</button>
+  </div>
+  <div class="try-stage" id="try-stage"><div class="frame" id="frame"><iframe id="preview" title="Panel preview"></iframe></div></div>
+</dialog>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="generator" content="Calming Corner board maker">
+<title>Talk Board</title>
+<!--
+  A tap-to-talk board made with the Calming Corner board maker.
+  Everything it needs (pictures, voice clips and the board itself) is inside
+  this one file, so it works offline. The board's data is the JSON in the
+  "board-data" script below; open this file in the board maker to edit it.
+-->
+<style>
+  :root {
+    --ink: #1f2328;
+    --line: #2b2f36;
+    --page: #eef1f4;
+    --strip: #ffffff;
+    --accent: #2f6fde;
+    --empty: #f5f6f8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: grid;
+    grid-template-rows: minmax(70px, 13vh) minmax(56px, 12vh) minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.4vh;
+    padding: 1.6vh 1.6vw 0.6vh;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  [hidden] { display: none !important; }
+  .print-title { display: none; }
+
+  /* Sentence strip */
+  .strip {
+    display: flex;
+    align-items: stretch;
+    gap: 1vw;
+    background: var(--strip);
+    border: 3px solid var(--line);
+    border-radius: 16px;
+    padding: 0.8vh 0.8vw;
+    min-width: 0;
+    min-height: 0;
+  }
+  .sentence {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.6vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 0;
+    scrollbar-width: none;
+    padding-left: 0.4vw;
+  }
+  .sentence::-webkit-scrollbar { display: none; }
+  .sentence:empty::before {
+    content: "Tap the pictures to talk";
+    color: #7b8490;
+    font-size: clamp(16px, 3.2vh, 80px);
+    white-space: nowrap;
+  }
+  .chip {
+    flex: none;
+    height: 100%;
+    max-width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3vh 0.7vw;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: clamp(12px, 2.2vh, 56px);
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .chip img { height: 62%; aspect-ratio: 1; object-fit: contain; }
+  .chip .dot { height: 62%; aspect-ratio: 1; border-radius: 50%; border: 2px solid var(--line); }
+  .tools { display: flex; gap: 0.6vw; flex: none; }
+  .tool {
+    border: 3px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    font-weight: 700;
+    font-size: clamp(13px, 2.4vh, 60px);
+    padding: 0 1.2vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    cursor: pointer;
+  }
+  .tool svg { height: 4.2vh; width: 4.2vh; min-height: 22px; min-width: 22px; }
+  .tool.say { background: var(--accent); color: #fff; border-color: #1d4fa8; }
+  .tool.icon-only { padding: 0 0.9vw; }
+  .tool.pressed { transform: scale(0.94); filter: brightness(0.9); }
+
+  /* Word grid */
+  .board {
+    display: grid;
+    border: 3px solid var(--line);
+    background: var(--line);
+    gap: 3px;
+    border-radius: 6px;
+    overflow: hidden;
+    min-height: 0;
+  }
+  .word {
+    border: 0;
+    margin: 0;
+    padding: 1vh 0.6vw 0.6vh;
+    font: inherit;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4vh;
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    container-type: size;
+    transition: transform 120ms ease, filter 120ms ease;
+  }
+  .word .label {
+    flex: none;
+    max-width: 100%;
+    font-size: 24px;
+    font-size: calc(var(--fit, 1) * min(20cqh, 15cqw, 110px));
+    font-weight: 600;
+    line-height: 1.05;
+    text-align: center;
+    overflow-wrap: normal;
+  }
+  .word img, .word .swatch, .word .nopic { flex: 1; width: 100%; min-height: 0; object-fit: contain; }
+  .word .swatch {
+    flex: 1 1 0;
+    width: auto;
+    max-width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid var(--line);
+  }
+  .word.empty { background: var(--empty); cursor: default; }
+  .word.pressed { transform: scale(0.96); filter: brightness(0.93); z-index: 1; box-shadow: inset 0 0 0 6px var(--accent); }
+
+  /* Colours */
+  .colors {
+    display: grid;
+    gap: 1vw;
+    align-items: center;
+    justify-items: center;
+    min-height: 0;
+  }
+  .color {
+    width: min(100%, max(56px, 12vh) * 1.1);
+    aspect-ratio: 1.1;
+    border-radius: 50%;
+    border: 3px solid var(--line);
+    cursor: pointer;
+    padding: 0;
+    transition: transform 120ms ease;
+  }
+  .color.pressed { transform: scale(0.9); box-shadow: 0 0 0 5px var(--accent); }
+
+  button:focus-visible { outline: 5px solid var(--accent); outline-offset: -5px; }
+  .foot {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 2vw; min-width: 0;
+    font-size: clamp(11px, 1.2vh, 24px); line-height: 1.3;
+  }
+  .draft-note { flex: none; font-weight: 700; color: #8a4b00; }
+  .credit { flex: 1; min-width: 0; color: #8a939d; text-align: right; }
+  .credit a { color: inherit; }
+
+  /* Inside the board maker: tap a cell to edit it. */
+  body.editing .word { cursor: pointer; }
+  body.editing .word.empty::after {
+    content: "+"; position: absolute; inset: 6px; display: grid; place-items: center;
+    border: 3px dashed #b7bec7; border-radius: 10px; color: #9aa3ad;
+    font-size: min(40cqh, 40cqw); font-weight: 300;
+  }
+  body.editing .word.selected { box-shadow: inset 0 0 0 6px #e8590c; z-index: 1; }
+  body.editing .tools, body.editing .colors { opacity: 0.55; }
+
+  /* Paper version: the same grid and colours, landscape, no buttons. */
+  @media print {
+    @page { size: landscape; margin: 10mm; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { height: auto; overflow: visible; }
+    body { display: block; padding: 0; background: #fff; }
+    .strip { display: none !important; }
+    .print-title { display: block; font-size: 18pt; font-weight: 700; margin: 0 0 3mm; }
+    .colors { height: 20mm; margin-bottom: 4mm; }
+    .color { width: auto; height: 100%; }
+    .board { height: 140mm; }
+    body.no-colors .board { height: 164mm; }
+    body.editing .word.selected { box-shadow: none; }
+    body.editing .word.empty::after { content: none; }
+    body.editing .colors { opacity: 1; }
+    .foot { margin-top: 2mm; font-size: 8pt; justify-content: flex-start; }
+    .credit { color: #555; text-align: left; }
+  }
+</style>
+</head>
+<body>
+<h1 class="print-title" id="print-title"></h1>
+<section class="strip" id="strip" aria-label="Sentence">
+  <div class="sentence" id="sentence" aria-live="polite"></div>
+  <div class="tools">
+    <button class="tool say" id="say" aria-label="Say the sentence">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3Zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4Zm-2.5-8.7v2.1a7 7 0 0 1 0 13.2v2.1a9 9 0 0 0 0-17.4Z"/></svg>
+      Say it
+    </button>
+    <button class="tool icon-only" id="back" aria-label="Remove the last word">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" d="M21 5H9l-6 7 6 7h12V5Zm-9 4 6 6m0-6-6 6"/></svg>
+    </button>
+    <button class="tool" id="clear" aria-label="Clear the sentence">Clear</button>
+    <button class="tool icon-only" id="full" aria-label="Full screen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+  </div>
+</section>
+<nav class="colors" id="colors" aria-label="Colours"></nav>
+<main class="board" id="board"></main>
+<footer class="foot">
+  <span class="draft-note" id="draft-note" hidden></span>
+  <span class="credit" id="credit"></span>
+</footer>
+
+<script type="application/json" id="board-data">null</script>
+<script>
+/* Fitzgerald-style colour key. The board maker uses the same keys. */
+var CATEGORY_COLORS = {
+  pronoun: '#f8efae', verb: '#d8eed3', describe: '#cde4f6', noun: '#fde0c2', place: '#e6def1',
+  social: '#f9d3e3', question: '#d9c8ef', negative: '#f6c6c3', neutral: '#ffffff'
+};
+var CREDITS = {
+  m: 'Mulberry Symbols by Steve Lee (mulberrysymbols.org)',
+  o: 'OpenMoji (openmoji.org)'
+};
+
+var DATA = JSON.parse(document.getElementById('board-data').textContent) || {
+  title: 'Talk Board', rows: 1, cols: 1, showSentence: true, showColors: false,
+  cells: [{ label: 'Open me in the board maker' }], colors: [], assets: {}
+};
+var ASSETS = DATA.assets || {};
+var PICTURES = ASSETS.pictures || {};
+var CLIPS = ASSETS.clips || {};
+var editing = false;
+
+function isColor(s) { return typeof s === 'string' && /^#[0-9a-f]{3,8}$/i.test(s); }
+function pictureSrc(id) {
+  var src = id && PICTURES[id];
+  /* Embedded pictures, or library files while previewing in the board maker. */
+  return typeof src === 'string' && /^(data:image\/|library\/)/.test(src) ? src : null;
+}
+
+/* ---------- audio ---------- */
+var ctx = null;
+var buffers = {};
+var loading = {};
+var gen = 0;
+var current = null;
+var element = null;
+
+function bytes(b64) {
+  var s = atob(b64), out = new Uint8Array(s.length);
+  for (var i = 0; i < s.length; i++) out[i] = s.charCodeAt(i);
+  return out.buffer;
+}
+function clipBytes(src) {
+  if (src.slice(0, 5) === 'data:') return Promise.resolve(bytes(src.slice(src.indexOf(',') + 1)));
+  return fetch(src).then(function (r) { return r.arrayBuffer(); });
+}
+function decode(key) {
+  if (!loading[key]) {
+    loading[key] = clipBytes(CLIPS[key])
+      .then(function (b) { return ctx.decodeAudioData(b); })
+      .then(function (buf) { buffers[key] = buf; return buf; }, function () { return null; });
+  }
+  return loading[key];
+}
+function wake() {
+  var AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return;
+  if (!ctx) {
+    ctx = new AC();
+    Object.keys(CLIPS).forEach(decode);
+  }
+  if (ctx.state === 'suspended') ctx.resume();
+}
+function stopAll() {
+  gen++;
+  if (current) { try { current.stop(); } catch (_) {} current = null; }
+  if (element) { element.pause(); element = null; }
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+}
+function speakText(text) {
+  return new Promise(function (done) {
+    var synth = window.speechSynthesis;
+    if (!synth || !text || !window.SpeechSynthesisUtterance) return done();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.9;
+    u.onend = u.onerror = function () { done(); };
+    synth.speak(u);
+    setTimeout(done, 1500 + text.length * 150);
+  });
+}
+function playOne(item) {
+  var key = item.clip;
+  if (key && CLIPS[key]) {
+    if (ctx && buffers[key]) {
+      return new Promise(function (done) {
+        var src = ctx.createBufferSource();
+        src.buffer = buffers[key];
+        src.connect(ctx.destination);
+        src.onended = function () { done(); };
+        current = src;
+        src.start();
+      });
+    }
+    /* Not decoded yet (the very first tap): play it with an audio element. */
+    return new Promise(function (done) {
+      var a = new Audio(CLIPS[key]);
+      element = a;
+      a.onended = a.onerror = function () { done(); };
+      var p = a.play();
+      if (p && p.catch) p.catch(function () { done(); });
+    });
+  }
+  return speakText(item.say);
+}
+function say(items) {
+  stopAll();
+  var mine = gen;
+  var i = 0;
+  (function next() {
+    if (mine !== gen || i >= items.length) return;
+    var item = items[i++];
+    playOne(item).then(function () { if (mine === gen) setTimeout(next, 120); });
+  })();
+}
+
+/* ---------- board ---------- */
+var sentence = document.getElementById('sentence');
+var words = [];
+
+function picture(cell) {
+  if (isColor(cell.swatch)) {
+    var dot = document.createElement('span');
+    dot.className = 'swatch';
+    dot.style.background = cell.swatch;
+    return dot;
+  }
+  var src = pictureSrc(cell.picture);
+  if (src) {
+    var img = document.createElement('img');
+    img.src = src;
+    img.alt = '';
+    img.draggable = false;
+    return img;
+  }
+  var none = document.createElement('span');
+  none.className = 'nopic';
+  return none;
+}
+function renderSentence() {
+  sentence.textContent = '';
+  words.forEach(function (w) {
+    var chip = document.createElement('span');
+    chip.className = 'chip';
+    if (w.color) {
+      var dot = document.createElement('span');
+      dot.className = 'dot';
+      dot.style.background = w.color;
+      chip.appendChild(dot);
+    } else {
+      chip.style.background = w.background;
+      if (w.swatch || pictureSrc(w.picture)) chip.appendChild(picture(w));
+    }
+    chip.appendChild(document.createTextNode(w.label));
+    sentence.appendChild(chip);
+  });
+  sentence.scrollLeft = sentence.scrollWidth;
+}
+function flash(el) {
+  el.classList.add('pressed');
+  clearTimeout(el._t);
+  el._t = setTimeout(function () { el.classList.remove('pressed'); }, 260);
+}
+/* Act on the first touch, and ignore the extra contacts a board reports for one press. */
+function onPress(el, fn) {
+  var last = -Infinity;
+  el.addEventListener('pointerdown', function (e) {
+    if (e.button > 0) return;
+    var now = performance.now();
+    if (now - last < 350) return;
+    last = now;
+    if (!editing) { wake(); flash(el); }
+    fn();
+  });
+  el.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (!editing) { wake(); flash(el); } fn(); }
+  });
+}
+
+var rows = Math.max(1, Math.min(12, DATA.rows | 0 || 1));
+var cols = Math.max(1, Math.min(12, DATA.cols | 0 || 1));
+var board = document.getElementById('board');
+board.style.gridTemplateColumns = 'repeat(' + cols + ', minmax(0, 1fr))';
+board.style.gridTemplateRows = 'repeat(' + rows + ', minmax(0, 1fr))';
+var cells = DATA.cells || [];
+for (var n = 0; n < rows * cols; n++) {
+  (function (index, cell) {
+    var label = String(cell.label || '');
+    var empty = !label && !cell.picture && !cell.swatch;
+    var b = document.createElement('button');
+    b.className = 'word' + (empty ? ' empty' : '');
+    b.dataset.index = index;
+    if (!empty) b.style.background = CATEGORY_COLORS[cell.category] || CATEGORY_COLORS.neutral;
+    b.setAttribute('aria-label', label || (empty ? 'Empty' : 'Picture'));
+    if (empty) b.tabIndex = -1;
+    if (!empty) {
+      b.appendChild(picture(cell));
+      var span = document.createElement('span');
+      span.className = 'label';
+      span.textContent = label;
+      b.appendChild(span);
+    }
+    onPress(b, function () {
+      if (editing) { window.parent.postMessage({ type: 'board-maker:cell', index: index }, '*'); return; }
+      if (empty) return;
+      words.push({
+        label: label, picture: cell.picture, swatch: cell.swatch,
+        background: b.style.background, clip: cell.clip, say: cell.say || label
+      });
+      renderSentence();
+      say([{ clip: cell.clip, say: cell.say || label }]);
+    });
+    board.appendChild(b);
+  })(n, cells[n] || {});
+}
+
+var colorList = (DATA.colors || []).filter(function (c) { return c && isColor(c.hex); });
+var colors = document.getElementById('colors');
+colors.style.gridTemplateColumns = 'repeat(' + Math.max(1, colorList.length) + ', minmax(0, 1fr))';
+colorList.forEach(function (c) {
+  var b = document.createElement('button');
+  b.className = 'color';
+  b.style.background = c.hex;
+  b.setAttribute('aria-label', c.label);
+  onPress(b, function () {
+    if (editing) return;
+    words.push({ label: c.label, color: c.hex, clip: c.clip, say: c.say || c.label });
+    renderSentence();
+    say([{ clip: c.clip, say: c.say || c.label }]);
+  });
+  colors.appendChild(b);
+});
+
+var showSentence = DATA.showSentence !== false;
+var showColors = !!DATA.showColors && colorList.length > 0;
+document.getElementById('strip').hidden = !showSentence;
+colors.hidden = !showColors;
+document.body.classList.toggle('no-colors', !showColors);
+document.body.style.gridTemplateRows = [
+  showSentence ? 'minmax(70px, 13vh)' : '',
+  showColors ? 'minmax(56px, 12vh)' : '',
+  'minmax(0, 1fr)', 'auto'
+].filter(Boolean).join(' ');
+
+var title = String(DATA.title || 'Talk Board');
+document.title = title;
+document.getElementById('print-title').textContent = title;
+
+/* Credits for the picture sets this board uses. */
+(function () {
+  var sets = [];
+  cells.slice(0, rows * cols).forEach(function (c) {
+    var set = c && typeof c.picture === 'string' && c.picture.charAt(1) === ':' ? c.picture.charAt(0) : '';
+    if (CREDITS[set] && sets.indexOf(set) < 0) sets.push(set);
+  });
+  sets.sort();
+  var credit = document.getElementById('credit');
+  var add = function (text) { credit.appendChild(document.createTextNode(text)); };
+  if (sets.length) {
+    add('Pictures: ' + sets.map(function (s) { return CREDITS[s]; }).join(' and ') + ', ' + (sets.length > 1 ? 'both ' : ''));
+    var link = document.createElement('a');
+    link.href = 'https://creativecommons.org/licenses/by-sa/4.0/';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'CC BY-SA 4.0';
+    credit.appendChild(link);
+  }
+  var usesCalm = cells.concat(colorList).some(function (c) { return c && /^calm:/.test(c.clip || ''); });
+  if (usesCalm) add((sets.length ? ' · ' : '') + 'voice from Calming Corner');
+})();
+
+/* Boards made from a topic starter that no teacher has approved yet say so. */
+if (typeof DATA.note === 'string' && DATA.note) {
+  var note = document.getElementById('draft-note');
+  note.textContent = DATA.note;
+  note.hidden = false;
+}
+
+onPress(document.getElementById('say'), function () { if (!editing) say(words.slice()); });
+onPress(document.getElementById('back'), function () { if (!editing) { words.pop(); renderSentence(); } });
+onPress(document.getElementById('clear'), function () { if (!editing) { words.length = 0; renderSentence(); stopAll(); } });
+onPress(document.getElementById('full'), function () {
+  if (editing) return;
+  var d = document;
+  if (d.fullscreenElement || d.webkitFullscreenElement) (d.exitFullscreen || d.webkitExitFullscreen).call(d);
+  else { var r = d.documentElement, go = r.requestFullscreen || r.webkitRequestFullscreen; if (go) go.call(r); }
+});
+document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+
+/* Shrink every label by the same amount until the longest one fits its cell. */
+function fit() {
+  var labels = board.querySelectorAll('.label');
+  var scale = 1;
+  board.style.setProperty('--fit', 1);
+  for (var tries = 0; tries < 30; tries++) {
+    var over = false;
+    for (var i = 0; i < labels.length && !over; i++) {
+      var l = labels[i], cell = l.parentNode;
+      if (l.scrollWidth > cell.clientWidth - 4 || l.offsetHeight > cell.clientHeight * 0.45) over = true;
+    }
+    if (!over) break;
+    scale *= 0.9;
+    board.style.setProperty('--fit', scale.toFixed(3));
+  }
+}
+fit();
+if (window.ResizeObserver) new ResizeObserver(fit).observe(board);
+else window.addEventListener('resize', fit);
+if (window.matchMedia) {
+  var printing = window.matchMedia('print');
+  if (printing.addEventListener) printing.addEventListener('change', fit);
+}
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+
+/* Messages from the board maker when this board is previewed inside it. */
+if (window.parent !== window) {
+  window.addEventListener('message', function (e) {
+    if (e.source !== window.parent) return;
+    var m = e.data || {};
+    if (m.type === 'board-maker:mode') {
+      editing = !!m.edit;
+      document.body.classList.toggle('editing', editing);
+      if (editing) { stopAll(); words.length = 0; renderSentence(); }
+    }
+    if (m.type === 'board-maker:select') {
+      Array.prototype.forEach.call(board.children, function (el, i) { el.classList.toggle('selected', i === m.index); });
+    }
+  });
+  window.parent.postMessage({ type: 'board-maker:ready' }, '*');
+}
+renderSentence();
+</script>
+</body>
+</html>

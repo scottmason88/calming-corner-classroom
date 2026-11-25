@@ -1,0 +1,3708 @@
+{
+ "about": "Topic starter boards for the board maker. Drafted with AI, pictures chosen by hand from library/index.json, and reviewed by a teacher with review.html. Only \"approved\" topics have been checked by a teacher.",
+ "core": {
+  "notes": "These 15 squares match the classroom core-word board. Please check the picture for \"you\" (OpenMoji \"index pointing at the viewer\"): a reviewer said it can read as a fist. It is on every topic board, so if it should change, it changes everywhere at once."
+ },
+ "topics": [
+  {
+   "key": "fire-drill",
+   "name": "Fire drill",
+   "blurb": "The alarm, lining up and going outside.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for alarm: Siren light (OpenMoji): there is no fire-alarm picture in either set. Picture for cover ears: Hear-no-evil monkey covering its ears (OpenMoji). Picture for friend: Handshake (OpenMoji): the people-holding-hands picture looked too like \"he, she, it\".",
+   "review": null,
+   "board": {
+    "title": "Fire drill",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "alarm",
+      "say": "alarm",
+      "category": "noun",
+      "picture": "o:1F6A8"
+     },
+     {
+      "label": "loud",
+      "say": "loud",
+      "category": "describe",
+      "picture": "m:loud"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "cover ears",
+      "say": "cover my ears",
+      "category": "verb",
+      "picture": "o:1F649"
+     },
+     {
+      "label": "line up",
+      "say": "line up",
+      "category": "verb",
+      "picture": "m:queue_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "walk",
+      "say": "walk",
+      "category": "verb",
+      "picture": "m:walk_,_to"
+     },
+     {
+      "label": "outside",
+      "say": "outside",
+      "category": "place",
+      "picture": "m:outside"
+     },
+     {
+      "label": "inside",
+      "say": "inside",
+      "category": "place",
+      "picture": "m:inside_room"
+     },
+     {
+      "label": "wait",
+      "say": "wait",
+      "category": "verb",
+      "picture": "m:wait_,_to"
+     },
+     {
+      "label": "quiet",
+      "say": "quiet",
+      "category": "describe",
+      "picture": "m:quiet"
+     },
+     {
+      "label": "teacher",
+      "say": "teacher",
+      "category": "pronoun",
+      "picture": "m:teacher_1a"
+     },
+     {
+      "label": "friend",
+      "say": "friend",
+      "category": "pronoun",
+      "picture": "o:1F91D-1F3FC"
+     },
+     {
+      "label": "hold hands",
+      "say": "hold hands",
+      "category": "verb",
+      "picture": "m:hold_hands_,_to"
+     },
+     {
+      "label": "scared",
+      "say": "scared",
+      "category": "describe",
+      "picture": "o:1F628"
+     }
+    ]
+   }
+  },
+  {
+   "key": "first-day",
+   "name": "First day of school",
+   "blurb": "Meeting the teacher and finding your way.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for friend: Handshake (OpenMoji): the people-holding-hands picture looked too like \"he, she, it\".",
+   "review": null,
+   "board": {
+    "title": "First day of school",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "hello",
+      "say": "hello",
+      "category": "social",
+      "picture": "m:hello"
+     },
+     {
+      "label": "goodbye",
+      "say": "goodbye",
+      "category": "social",
+      "picture": "o:1F44B-1F3FC"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "my name is",
+      "say": "my name is",
+      "category": "social",
+      "picture": "o:1F4DB"
+     },
+     {
+      "label": "teacher",
+      "say": "teacher",
+      "category": "pronoun",
+      "picture": "m:teacher_1a"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "friend",
+      "say": "friend",
+      "category": "pronoun",
+      "picture": "o:1F91D-1F3FC"
+     },
+     {
+      "label": "classroom",
+      "say": "classroom",
+      "category": "noun",
+      "picture": "m:class_room"
+     },
+     {
+      "label": "desk",
+      "say": "desk",
+      "category": "noun",
+      "picture": "m:desk"
+     },
+     {
+      "label": "backpack",
+      "say": "backpack",
+      "category": "noun",
+      "picture": "m:school_bag"
+     },
+     {
+      "label": "bathroom",
+      "say": "bathroom",
+      "category": "noun",
+      "picture": "m:toilet_,_go_to_the"
+     },
+     {
+      "label": "lunch",
+      "say": "lunch",
+      "category": "noun",
+      "picture": "m:lunch_1"
+     },
+     {
+      "label": "home",
+      "say": "home",
+      "category": "noun",
+      "picture": "m:house"
+     },
+     {
+      "label": "scared",
+      "say": "scared",
+      "category": "describe",
+      "picture": "o:1F628"
+     },
+     {
+      "label": "excited",
+      "say": "excited",
+      "category": "describe",
+      "picture": "o:1F929"
+     }
+    ]
+   }
+  },
+  {
+   "key": "lunch",
+   "name": "Lunch",
+   "blurb": "Eating, drinking and asking for help to open things.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left).",
+   "review": null,
+   "board": {
+    "title": "Lunch",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "eat",
+      "say": "eat",
+      "category": "verb",
+      "picture": "m:eat_,_to"
+     },
+     {
+      "label": "drink",
+      "say": "drink",
+      "category": "verb",
+      "picture": "m:drink_,_to"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "open",
+      "say": "open",
+      "category": "verb",
+      "picture": "m:open_,_to"
+     },
+     {
+      "label": "sandwich",
+      "say": "sandwich",
+      "category": "noun",
+      "picture": "m:sandwich"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "apple",
+      "say": "apple",
+      "category": "noun",
+      "picture": "m:apple"
+     },
+     {
+      "label": "banana",
+      "say": "banana",
+      "category": "noun",
+      "picture": "m:banana"
+     },
+     {
+      "label": "water",
+      "say": "water",
+      "category": "noun",
+      "picture": "m:water"
+     },
+     {
+      "label": "milk",
+      "say": "milk",
+      "category": "noun",
+      "picture": "m:milk"
+     },
+     {
+      "label": "spoon",
+      "say": "spoon",
+      "category": "noun",
+      "picture": "m:spoon"
+     },
+     {
+      "label": "napkin",
+      "say": "napkin",
+      "category": "noun",
+      "picture": "m:serviette"
+     },
+     {
+      "label": "hungry",
+      "say": "hungry",
+      "category": "describe",
+      "picture": "m:hungry"
+     },
+     {
+      "label": "yummy",
+      "say": "yummy",
+      "category": "describe",
+      "picture": "o:1F60B"
+     },
+     {
+      "label": "yucky",
+      "say": "yucky",
+      "category": "describe",
+      "picture": "m:yucky"
+     }
+    ]
+   }
+  },
+  {
+   "key": "recess",
+   "name": "Recess",
+   "blurb": "The playground, turns and getting hurt.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). \"Sandbox\" is called a sandpit in the UK. Picture for friend: Handshake (OpenMoji): the people-holding-hands picture looked too like \"he, she, it\". Picture for my turn: Index finger pointing up: neither set has a \"my turn\" symbol. Picture for your turn: Hand pointing to the side: neither set has a \"your turn\" symbol.",
+   "review": null,
+   "board": {
+    "title": "Recess",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "play",
+      "say": "play",
+      "category": "verb",
+      "picture": "m:play_,_to"
+     },
+     {
+      "label": "swing",
+      "say": "swing",
+      "category": "noun",
+      "picture": "m:swing"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "slide",
+      "say": "slide",
+      "category": "noun",
+      "picture": "m:slide"
+     },
+     {
+      "label": "climb",
+      "say": "climb",
+      "category": "verb",
+      "picture": "m:climb_up_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "run",
+      "say": "run",
+      "category": "verb",
+      "picture": "m:run_,_to"
+     },
+     {
+      "label": "ball",
+      "say": "ball",
+      "category": "noun",
+      "picture": "m:ball"
+     },
+     {
+      "label": "sandbox",
+      "say": "sandbox",
+      "category": "noun",
+      "picture": "m:sand_pit"
+     },
+     {
+      "label": "friend",
+      "say": "friend",
+      "category": "pronoun",
+      "picture": "o:1F91D-1F3FC"
+     },
+     {
+      "label": "my turn",
+      "say": "my turn",
+      "category": "social",
+      "picture": "o:261D-1F3FC"
+     },
+     {
+      "label": "your turn",
+      "say": "your turn",
+      "category": "social",
+      "picture": "o:1F449-1F3FC"
+     },
+     {
+      "label": "hurt",
+      "say": "hurt",
+      "category": "describe",
+      "picture": "o:1F915"
+     },
+     {
+      "label": "outside",
+      "say": "outside",
+      "category": "place",
+      "picture": "m:outside"
+     },
+     {
+      "label": "inside",
+      "say": "inside",
+      "category": "place",
+      "picture": "m:inside_room"
+     }
+    ]
+   }
+  },
+  {
+   "key": "bathroom",
+   "name": "Bathroom",
+   "blurb": "Toilet, washing hands and asking for help.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Swap \"pee\" and \"poop\" for the words the school and family use. Picture for pee: Mulberry \"need toilet\". Picture for accident: Mulberry \"wet\" (second version): two water drops.",
+   "review": null,
+   "board": {
+    "title": "Bathroom",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "toilet",
+      "say": "toilet",
+      "category": "noun",
+      "picture": "m:toilet"
+     },
+     {
+      "label": "pee",
+      "say": "pee",
+      "category": "verb",
+      "picture": "m:need_toilet"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "poop",
+      "say": "poop",
+      "category": "verb",
+      "picture": "o:1F4A9"
+     },
+     {
+      "label": "toilet paper",
+      "say": "toilet paper",
+      "category": "noun",
+      "picture": "m:toilet_roll"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "flush",
+      "say": "flush",
+      "category": "verb",
+      "picture": "m:flush_toilet_,_to"
+     },
+     {
+      "label": "wash hands",
+      "say": "wash hands",
+      "category": "verb",
+      "picture": "m:wash_hands_,_to"
+     },
+     {
+      "label": "soap",
+      "say": "soap",
+      "category": "noun",
+      "picture": "m:soap"
+     },
+     {
+      "label": "water",
+      "say": "water",
+      "category": "noun",
+      "picture": "m:water"
+     },
+     {
+      "label": "paper towel",
+      "say": "paper towel",
+      "category": "noun",
+      "picture": "m:paper_towel"
+     },
+     {
+      "label": "door",
+      "say": "door",
+      "category": "noun",
+      "picture": "m:door"
+     },
+     {
+      "label": "pants",
+      "say": "pants",
+      "category": "noun",
+      "picture": "m:trousers"
+     },
+     {
+      "label": "wet",
+      "say": "wet",
+      "category": "describe",
+      "picture": "m:wet"
+     },
+     {
+      "label": "accident",
+      "say": "I had an accident",
+      "category": "noun",
+      "picture": "m:wet_1"
+     }
+    ]
+   }
+  },
+  {
+   "key": "outside-clothes",
+   "name": "Getting dressed for outside",
+   "blurb": "Coats, hats and the weather.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Depends on the season: swap the weather squares as needed.",
+   "review": null,
+   "board": {
+    "title": "Getting dressed for outside",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "coat",
+      "say": "coat",
+      "category": "noun",
+      "picture": "m:coat"
+     },
+     {
+      "label": "hat",
+      "say": "hat",
+      "category": "noun",
+      "picture": "m:bobble_hat"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "gloves",
+      "say": "gloves",
+      "category": "noun",
+      "picture": "m:gloves"
+     },
+     {
+      "label": "scarf",
+      "say": "scarf",
+      "category": "noun",
+      "picture": "m:scarf"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "boots",
+      "say": "boots",
+      "category": "noun",
+      "picture": "m:wellington_boots"
+     },
+     {
+      "label": "shoes",
+      "say": "shoes",
+      "category": "noun",
+      "picture": "m:shoe_-_mans"
+     },
+     {
+      "label": "zip",
+      "say": "zip",
+      "category": "verb",
+      "picture": "m:zip"
+     },
+     {
+      "label": "sunglasses",
+      "say": "sunglasses",
+      "category": "noun",
+      "picture": "m:sunglasses"
+     },
+     {
+      "label": "umbrella",
+      "say": "umbrella",
+      "category": "noun",
+      "picture": "m:umbrella"
+     },
+     {
+      "label": "rain",
+      "say": "rain",
+      "category": "noun",
+      "picture": "m:rain"
+     },
+     {
+      "label": "snow",
+      "say": "snow",
+      "category": "noun",
+      "picture": "m:snow"
+     },
+     {
+      "label": "cold",
+      "say": "cold",
+      "category": "describe",
+      "picture": "o:1F976"
+     },
+     {
+      "label": "hot",
+      "say": "hot",
+      "category": "describe",
+      "picture": "m:hot"
+     }
+    ]
+   }
+  },
+  {
+   "key": "art",
+   "name": "Art",
+   "blurb": "Drawing, painting, cutting and gluing.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left).",
+   "review": null,
+   "board": {
+    "title": "Art",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "draw",
+      "say": "draw",
+      "category": "verb",
+      "picture": "m:draw_,_to"
+     },
+     {
+      "label": "paint",
+      "say": "paint",
+      "category": "verb",
+      "picture": "m:paint_,_to"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "color",
+      "say": "color",
+      "category": "verb",
+      "picture": "m:colour"
+     },
+     {
+      "label": "cut",
+      "say": "cut",
+      "category": "verb",
+      "picture": "m:cut_with_scissors_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "glue",
+      "say": "glue",
+      "category": "noun",
+      "picture": "m:glue"
+     },
+     {
+      "label": "paintbrush",
+      "say": "paintbrush",
+      "category": "noun",
+      "picture": "m:paint_brush"
+     },
+     {
+      "label": "crayon",
+      "say": "crayon",
+      "category": "noun",
+      "picture": "m:crayon"
+     },
+     {
+      "label": "pencil",
+      "say": "pencil",
+      "category": "noun",
+      "picture": "m:pencil"
+     },
+     {
+      "label": "paper",
+      "say": "paper",
+      "category": "noun",
+      "picture": "m:paper"
+     },
+     {
+      "label": "scissors",
+      "say": "scissors",
+      "category": "noun",
+      "picture": "m:scissors"
+     },
+     {
+      "label": "apron",
+      "say": "apron",
+      "category": "noun",
+      "picture": "m:apron"
+     },
+     {
+      "label": "messy",
+      "say": "messy",
+      "category": "describe",
+      "picture": "m:messy_clothes"
+     },
+     {
+      "label": "wash",
+      "say": "wash",
+      "category": "verb",
+      "picture": "m:wash_hands_,_to"
+     }
+    ]
+   }
+  },
+  {
+   "key": "music",
+   "name": "Music",
+   "blurb": "Singing, dancing and instruments.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left).",
+   "review": null,
+   "board": {
+    "title": "Music",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "sing",
+      "say": "sing",
+      "category": "verb",
+      "picture": "m:sing_,_to"
+     },
+     {
+      "label": "dance",
+      "say": "dance",
+      "category": "verb",
+      "picture": "m:dance_,_to"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "listen",
+      "say": "listen",
+      "category": "verb",
+      "picture": "o:1F442-1F3FC"
+     },
+     {
+      "label": "song",
+      "say": "song",
+      "category": "noun",
+      "picture": "o:1F3B5"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "drum",
+      "say": "drum",
+      "category": "noun",
+      "picture": "m:drum"
+     },
+     {
+      "label": "shaker",
+      "say": "shaker",
+      "category": "noun",
+      "picture": "o:1FA87"
+     },
+     {
+      "label": "bell",
+      "say": "bell",
+      "category": "noun",
+      "picture": "m:bell"
+     },
+     {
+      "label": "piano",
+      "say": "piano",
+      "category": "noun",
+      "picture": "o:1F3B9"
+     },
+     {
+      "label": "guitar",
+      "say": "guitar",
+      "category": "noun",
+      "picture": "m:guitar"
+     },
+     {
+      "label": "loud",
+      "say": "loud",
+      "category": "describe",
+      "picture": "m:loud"
+     },
+     {
+      "label": "quiet",
+      "say": "quiet",
+      "category": "describe",
+      "picture": "m:quiet"
+     },
+     {
+      "label": "fast",
+      "say": "fast",
+      "category": "describe",
+      "picture": "m:fast_2"
+     },
+     {
+      "label": "slow",
+      "say": "slow",
+      "category": "describe",
+      "picture": "o:1F40C"
+     }
+    ]
+   }
+  },
+  {
+   "key": "library",
+   "name": "Library",
+   "blurb": "Choosing and reading books.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for this one: Hand pointing down, for \"I choose this one\".",
+   "review": null,
+   "board": {
+    "title": "Library",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "book",
+      "say": "book",
+      "category": "noun",
+      "picture": "o:1F4D5"
+     },
+     {
+      "label": "read",
+      "say": "read",
+      "category": "verb",
+      "picture": "m:read_,_to"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "story",
+      "say": "story",
+      "category": "noun",
+      "picture": "o:1F4D6"
+     },
+     {
+      "label": "page",
+      "say": "page",
+      "category": "noun",
+      "picture": "o:1F4C4"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "picture",
+      "say": "picture",
+      "category": "noun",
+      "picture": "m:picture"
+     },
+     {
+      "label": "this one",
+      "say": "this one",
+      "category": "describe",
+      "picture": "o:1F447-1F3FC"
+     },
+     {
+      "label": "sit",
+      "say": "sit",
+      "category": "verb",
+      "picture": "m:sit_,_to"
+     },
+     {
+      "label": "quiet",
+      "say": "quiet",
+      "category": "describe",
+      "picture": "m:quiet"
+     },
+     {
+      "label": "whisper",
+      "say": "whisper",
+      "category": "verb",
+      "picture": "m:whisper_,_to"
+     },
+     {
+      "label": "bookmark",
+      "say": "bookmark",
+      "category": "noun",
+      "picture": "o:1F516"
+     },
+     {
+      "label": "shelf",
+      "say": "shelf",
+      "category": "noun",
+      "picture": "m:book_shelf"
+     },
+     {
+      "label": "take home",
+      "say": "take it home",
+      "category": "verb",
+      "picture": "m:carry_books_,_to"
+     },
+     {
+      "label": "give back",
+      "say": "give it back",
+      "category": "verb",
+      "picture": "m:return_book_,_to"
+     }
+    ]
+   }
+  },
+  {
+   "key": "bus-car",
+   "name": "Bus or car ride",
+   "blurb": "Seats, seat belts and how long it takes.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for driver: Mulberry \"taxi driver\", used for any driver.",
+   "review": null,
+   "board": {
+    "title": "Bus or car ride",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "bus",
+      "say": "bus",
+      "category": "noun",
+      "picture": "m:bus"
+     },
+     {
+      "label": "car",
+      "say": "car",
+      "category": "noun",
+      "picture": "m:car"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "seat",
+      "say": "seat",
+      "category": "noun",
+      "picture": "o:1F4BA"
+     },
+     {
+      "label": "seat belt",
+      "say": "seat belt",
+      "category": "noun",
+      "picture": "m:seat_belt"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "window",
+      "say": "window",
+      "category": "noun",
+      "picture": "m:window"
+     },
+     {
+      "label": "driver",
+      "say": "driver",
+      "category": "pronoun",
+      "picture": "m:taxi_driver_1a"
+     },
+     {
+      "label": "school",
+      "say": "school",
+      "category": "noun",
+      "picture": "m:school"
+     },
+     {
+      "label": "home",
+      "say": "home",
+      "category": "noun",
+      "picture": "m:house"
+     },
+     {
+      "label": "fast",
+      "say": "fast",
+      "category": "describe",
+      "picture": "m:fast_2"
+     },
+     {
+      "label": "slow",
+      "say": "slow",
+      "category": "describe",
+      "picture": "o:1F40C"
+     },
+     {
+      "label": "music",
+      "say": "music",
+      "category": "noun",
+      "picture": "m:music"
+     },
+     {
+      "label": "sick",
+      "say": "I feel sick",
+      "category": "describe",
+      "picture": "o:1F922"
+     },
+     {
+      "label": "how long",
+      "say": "how long",
+      "category": "question",
+      "picture": "m:clock"
+     }
+    ]
+   }
+  },
+  {
+   "key": "nurse",
+   "name": "Doctor or nurse",
+   "blurb": "Saying what hurts and what helps.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for tummy: Mulberry \"stomach ache\", which shows the tummy hurting. Picture for cough: Face with a medical mask: neither set has a cough picture.",
+   "review": null,
+   "board": {
+    "title": "Doctor or nurse",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "nurse",
+      "say": "nurse",
+      "category": "pronoun",
+      "picture": "m:nurse_1a"
+     },
+     {
+      "label": "doctor",
+      "say": "doctor",
+      "category": "pronoun",
+      "picture": "m:doctor_1a"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "hurt",
+      "say": "hurt",
+      "category": "describe",
+      "picture": "o:1F915"
+     },
+     {
+      "label": "sick",
+      "say": "sick",
+      "category": "describe",
+      "picture": "o:1F912"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "head",
+      "say": "head",
+      "category": "noun",
+      "picture": "m:head"
+     },
+     {
+      "label": "tummy",
+      "say": "tummy",
+      "category": "noun",
+      "picture": "m:stomach_ache"
+     },
+     {
+      "label": "cough",
+      "say": "cough",
+      "category": "verb",
+      "picture": "o:1F637"
+     },
+     {
+      "label": "bandage",
+      "say": "bandage",
+      "category": "noun",
+      "picture": "m:plaster"
+     },
+     {
+      "label": "ice pack",
+      "say": "ice pack",
+      "category": "noun",
+      "picture": "o:1F9CA"
+     },
+     {
+      "label": "medicine",
+      "say": "medicine",
+      "category": "noun",
+      "picture": "m:medicine"
+     },
+     {
+      "label": "thermometer",
+      "say": "thermometer",
+      "category": "noun",
+      "picture": "m:thermometer"
+     },
+     {
+      "label": "scared",
+      "say": "scared",
+      "category": "describe",
+      "picture": "o:1F628"
+     },
+     {
+      "label": "better",
+      "say": "better",
+      "category": "describe",
+      "picture": "o:1F44D-1F3FC"
+     }
+    ]
+   }
+  },
+  {
+   "key": "haircut",
+   "name": "Haircut",
+   "blurb": "The chair, scissors, clippers and how it feels.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for clippers: OpenMoji razor: neither set has hair clippers.",
+   "review": null,
+   "board": {
+    "title": "Haircut",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "hair",
+      "say": "hair",
+      "category": "noun",
+      "picture": "m:short_hair"
+     },
+     {
+      "label": "haircut",
+      "say": "haircut",
+      "category": "noun",
+      "picture": "m:haircut"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "scissors",
+      "say": "scissors",
+      "category": "noun",
+      "picture": "m:scissors"
+     },
+     {
+      "label": "clippers",
+      "say": "clippers",
+      "category": "noun",
+      "picture": "o:1FA92"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "comb",
+      "say": "comb",
+      "category": "noun",
+      "picture": "m:comb"
+     },
+     {
+      "label": "mirror",
+      "say": "mirror",
+      "category": "noun",
+      "picture": "m:mirror"
+     },
+     {
+      "label": "chair",
+      "say": "chair",
+      "category": "noun",
+      "picture": "m:chair"
+     },
+     {
+      "label": "hairdryer",
+      "say": "hairdryer",
+      "category": "noun",
+      "picture": "m:hairdryer"
+     },
+     {
+      "label": "spray",
+      "say": "spray",
+      "category": "noun",
+      "picture": "m:spray_,_to"
+     },
+     {
+      "label": "short",
+      "say": "short",
+      "category": "describe",
+      "picture": "m:short"
+     },
+     {
+      "label": "long",
+      "say": "long",
+      "category": "describe",
+      "picture": "m:long"
+     },
+     {
+      "label": "itchy",
+      "say": "itchy",
+      "category": "describe",
+      "picture": "m:itch"
+     },
+     {
+      "label": "loud",
+      "say": "loud",
+      "category": "describe",
+      "picture": "m:loud"
+     }
+    ]
+   }
+  },
+  {
+   "key": "birthday",
+   "name": "Birthday party",
+   "blurb": "Cake, presents, balloons and saying thank you.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for friend: Handshake (OpenMoji): the people-holding-hands picture looked too like \"he, she, it\". Picture for game: A die (OpenMoji) stands for games in general.",
+   "review": null,
+   "board": {
+    "title": "Birthday party",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "happy birthday",
+      "say": "happy birthday",
+      "category": "social",
+      "picture": "m:celebrate_birthday"
+     },
+     {
+      "label": "cake",
+      "say": "cake",
+      "category": "noun",
+      "picture": "m:birthday_cake"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "candles",
+      "say": "candles",
+      "category": "noun",
+      "picture": "o:1F56F"
+     },
+     {
+      "label": "blow",
+      "say": "blow",
+      "category": "verb",
+      "picture": "m:blow_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "present",
+      "say": "present",
+      "category": "noun",
+      "picture": "m:present"
+     },
+     {
+      "label": "open",
+      "say": "open",
+      "category": "verb",
+      "picture": "m:open_,_to"
+     },
+     {
+      "label": "balloon",
+      "say": "balloon",
+      "category": "noun",
+      "picture": "m:balloon"
+     },
+     {
+      "label": "party hat",
+      "say": "party hat",
+      "category": "noun",
+      "picture": "o:1F973"
+     },
+     {
+      "label": "sing",
+      "say": "sing",
+      "category": "verb",
+      "picture": "m:sing_,_to"
+     },
+     {
+      "label": "friend",
+      "say": "friend",
+      "category": "pronoun",
+      "picture": "o:1F91D-1F3FC"
+     },
+     {
+      "label": "game",
+      "say": "game",
+      "category": "noun",
+      "picture": "o:1F3B2"
+     },
+     {
+      "label": "eat",
+      "say": "eat",
+      "category": "verb",
+      "picture": "m:eat_,_to"
+     },
+     {
+      "label": "thank you",
+      "say": "thank you",
+      "category": "social",
+      "picture": "o:1F64F-1F3FC"
+     }
+    ]
+   }
+  },
+  {
+   "key": "substitute",
+   "name": "Substitute teacher",
+   "blurb": "A different teacher for the day.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for schedule: Clipboard (OpenMoji): neither set has a visual schedule picture. Picture for different: Mulberry \"change\": neither set has \"different\".",
+   "review": null,
+   "board": {
+    "title": "Substitute teacher",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "new teacher",
+      "say": "new teacher",
+      "category": "pronoun",
+      "picture": "m:teacher_2a"
+     },
+     {
+      "label": "my teacher",
+      "say": "my teacher",
+      "category": "pronoun",
+      "picture": "m:teacher_1a"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "your name",
+      "say": "what is your name",
+      "category": "question",
+      "picture": "o:1F4DB"
+     },
+     {
+      "label": "where",
+      "say": "where",
+      "category": "question",
+      "picture": "m:where"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "when",
+      "say": "when",
+      "category": "question",
+      "picture": "m:when"
+     },
+     {
+      "label": "coming back",
+      "say": "coming back",
+      "category": "verb",
+      "picture": "m:return_,_to"
+     },
+     {
+      "label": "schedule",
+      "say": "schedule",
+      "category": "noun",
+      "picture": "o:1F4CB"
+     },
+     {
+      "label": "same",
+      "say": "same",
+      "category": "describe",
+      "picture": "m:same"
+     },
+     {
+      "label": "different",
+      "say": "different",
+      "category": "describe",
+      "picture": "m:change_,_to"
+     },
+     {
+      "label": "worried",
+      "say": "worried",
+      "category": "describe",
+      "picture": "o:1F61F"
+     },
+     {
+      "label": "okay",
+      "say": "okay",
+      "category": "social",
+      "picture": "o:1F44C-1F3FC"
+     },
+     {
+      "label": "break",
+      "say": "break",
+      "category": "noun",
+      "picture": "m:break_time_1"
+     },
+     {
+      "label": "quiet",
+      "say": "quiet",
+      "category": "describe",
+      "picture": "m:quiet"
+     }
+    ]
+   }
+  },
+  {
+   "key": "assembly",
+   "name": "Assembly and loud noises",
+   "blurb": "Sitting with everyone, and what to do when it is loud.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for cover ears: Hear-no-evil monkey covering its ears (OpenMoji).",
+   "review": null,
+   "board": {
+    "title": "Assembly and loud noises",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "assembly",
+      "say": "assembly",
+      "category": "noun",
+      "picture": "m:assembly"
+     },
+     {
+      "label": "gym",
+      "say": "gym",
+      "category": "noun",
+      "picture": "m:gym_1"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "sit",
+      "say": "sit",
+      "category": "verb",
+      "picture": "m:sit_on_floor_,_to"
+     },
+     {
+      "label": "clap",
+      "say": "clap",
+      "category": "verb",
+      "picture": "m:clap_hands_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "music",
+      "say": "music",
+      "category": "noun",
+      "picture": "m:music"
+     },
+     {
+      "label": "microphone",
+      "say": "microphone",
+      "category": "noun",
+      "picture": "m:microphone"
+     },
+     {
+      "label": "loud",
+      "say": "loud",
+      "category": "describe",
+      "picture": "m:loud"
+     },
+     {
+      "label": "too loud",
+      "say": "too loud",
+      "category": "describe",
+      "picture": "o:1F50A"
+     },
+     {
+      "label": "cover ears",
+      "say": "cover my ears",
+      "category": "verb",
+      "picture": "o:1F649"
+     },
+     {
+      "label": "headphones",
+      "say": "headphones",
+      "category": "noun",
+      "picture": "m:headphones"
+     },
+     {
+      "label": "leave",
+      "say": "leave",
+      "category": "verb",
+      "picture": "m:exit_,_to"
+     },
+     {
+      "label": "break",
+      "say": "break",
+      "category": "noun",
+      "picture": "m:break_time_1"
+     },
+     {
+      "label": "quiet",
+      "say": "quiet",
+      "category": "describe",
+      "picture": "m:quiet"
+     }
+    ]
+   }
+  },
+  {
+   "key": "waiting",
+   "name": "Waiting my turn",
+   "blurb": "Turns, lines and timers.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for my turn: Index finger pointing up: neither set has a \"my turn\" symbol. Picture for your turn: Hand pointing to the side: neither set has a \"your turn\" symbol. Picture for later: OpenMoji \"SOON\" arrow, which has English text on it.",
+   "review": null,
+   "board": {
+    "title": "Waiting my turn",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "wait",
+      "say": "wait",
+      "category": "verb",
+      "picture": "m:wait_,_to"
+     },
+     {
+      "label": "my turn",
+      "say": "my turn",
+      "category": "social",
+      "picture": "o:261D-1F3FC"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "your turn",
+      "say": "your turn",
+      "category": "social",
+      "picture": "o:1F449-1F3FC"
+     },
+     {
+      "label": "line",
+      "say": "line",
+      "category": "noun",
+      "picture": "m:queue_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "first",
+      "say": "first",
+      "category": "describe",
+      "picture": "m:first"
+     },
+     {
+      "label": "next",
+      "say": "next",
+      "category": "describe",
+      "picture": "m:next"
+     },
+     {
+      "label": "last",
+      "say": "last",
+      "category": "describe",
+      "picture": "m:last"
+     },
+     {
+      "label": "now",
+      "say": "now",
+      "category": "describe",
+      "picture": "m:now"
+     },
+     {
+      "label": "later",
+      "say": "later",
+      "category": "describe",
+      "picture": "o:1F51C"
+     },
+     {
+      "label": "timer",
+      "say": "timer",
+      "category": "noun",
+      "picture": "o:23F3"
+     },
+     {
+      "label": "count",
+      "say": "count",
+      "category": "verb",
+      "picture": "m:count_,_to"
+     },
+     {
+      "label": "how long",
+      "say": "how long",
+      "category": "question",
+      "picture": "m:clock"
+     },
+     {
+      "label": "okay",
+      "say": "okay",
+      "category": "social",
+      "picture": "o:1F44C-1F3FC"
+     }
+    ]
+   }
+  },
+  {
+   "key": "calm-down",
+   "name": "Calm-down choices",
+   "blurb": "The Calming Corner tools, to choose a way to calm down.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Every square is a Calming Corner tool and already has a clip in the app voice. Picture for glitter jar: Mulberry \"glitter\": check that it reads as the Calming Corner glitter jar.",
+   "review": null,
+   "board": {
+    "title": "Calm-down choices",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "breathe",
+      "say": "breathe",
+      "category": "verb",
+      "picture": "o:1F62E-200D-1F4A8"
+     },
+     {
+      "label": "hand breathing",
+      "say": "hand breathing",
+      "category": "verb",
+      "picture": "o:1F590-1F3FC"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "balloon",
+      "say": "balloon",
+      "category": "noun",
+      "picture": "m:balloon"
+     },
+     {
+      "label": "blow the pinwheel",
+      "say": "blow the pinwheel",
+      "category": "verb",
+      "picture": "m:blow_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "squeeze hug",
+      "say": "squeeze hug",
+      "category": "verb",
+      "picture": "m:hug_,_to"
+     },
+     {
+      "label": "butterfly hug",
+      "say": "butterfly hug",
+      "category": "verb",
+      "picture": "m:butterfly"
+     },
+     {
+      "label": "glitter jar",
+      "say": "glitter jar",
+      "category": "noun",
+      "picture": "m:glitter"
+     },
+     {
+      "label": "5 senses",
+      "say": "5 senses",
+      "category": "noun",
+      "picture": "m:senses"
+     },
+     {
+      "label": "heavy work",
+      "say": "heavy work",
+      "category": "verb",
+      "picture": "m:push_,_to"
+     },
+     {
+      "label": "teddy bear",
+      "say": "teddy bear",
+      "category": "noun",
+      "picture": "m:teddy_bear"
+     },
+     {
+      "label": "draw",
+      "say": "draw",
+      "category": "verb",
+      "picture": "m:draw_,_to"
+     },
+     {
+      "label": "a break",
+      "say": "I need a break",
+      "category": "noun",
+      "picture": "m:break_time_1"
+     },
+     {
+      "label": "quiet",
+      "say": "I need quiet",
+      "category": "describe",
+      "picture": "m:quiet"
+     }
+    ]
+   }
+  },
+  {
+   "key": "morning",
+   "name": "Morning routine",
+   "blurb": "Arriving, unpacking and starting the day.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for schedule: Clipboard (OpenMoji): neither set has a visual schedule picture.",
+   "review": null,
+   "board": {
+    "title": "Morning routine",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "good morning",
+      "say": "good morning",
+      "category": "social",
+      "picture": "m:morning"
+     },
+     {
+      "label": "hello",
+      "say": "hello",
+      "category": "social",
+      "picture": "m:hello"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "backpack",
+      "say": "backpack",
+      "category": "noun",
+      "picture": "m:school_bag"
+     },
+     {
+      "label": "coat",
+      "say": "coat",
+      "category": "noun",
+      "picture": "m:coat"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "hang up",
+      "say": "hang up",
+      "category": "verb",
+      "picture": "m:hang_coat_,_to"
+     },
+     {
+      "label": "lunch box",
+      "say": "lunch box",
+      "category": "noun",
+      "picture": "m:lunch_box"
+     },
+     {
+      "label": "wash hands",
+      "say": "wash hands",
+      "category": "verb",
+      "picture": "m:wash_hands_,_to"
+     },
+     {
+      "label": "schedule",
+      "say": "schedule",
+      "category": "noun",
+      "picture": "o:1F4CB"
+     },
+     {
+      "label": "calendar",
+      "say": "calendar",
+      "category": "noun",
+      "picture": "m:calendar"
+     },
+     {
+      "label": "weather",
+      "say": "weather",
+      "category": "noun",
+      "picture": "o:26C5"
+     },
+     {
+      "label": "circle time",
+      "say": "circle time",
+      "category": "noun",
+      "picture": "m:circle_time"
+     },
+     {
+      "label": "sit",
+      "say": "sit",
+      "category": "verb",
+      "picture": "m:sit_,_to"
+     },
+     {
+      "label": "breakfast",
+      "say": "breakfast",
+      "category": "noun",
+      "picture": "m:breakfast_1"
+     }
+    ]
+   }
+  },
+  {
+   "key": "home-time",
+   "name": "Home time",
+   "blurb": "Packing up and going home.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Swap \"mom\", \"dad\" and \"grandma\" for the child's own family. Mulberry's picture is named \"mum\".",
+   "review": null,
+   "board": {
+    "title": "Home time",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "goodbye",
+      "say": "goodbye",
+      "category": "social",
+      "picture": "o:1F44B-1F3FC"
+     },
+     {
+      "label": "see you tomorrow",
+      "say": "see you tomorrow",
+      "category": "social",
+      "picture": "m:tomorrow"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "home",
+      "say": "home",
+      "category": "noun",
+      "picture": "m:house"
+     },
+     {
+      "label": "pack up",
+      "say": "pack up",
+      "category": "verb",
+      "picture": "m:tidy_up_,_to"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "backpack",
+      "say": "backpack",
+      "category": "noun",
+      "picture": "m:school_bag"
+     },
+     {
+      "label": "coat",
+      "say": "coat",
+      "category": "noun",
+      "picture": "m:coat"
+     },
+     {
+      "label": "line up",
+      "say": "line up",
+      "category": "verb",
+      "picture": "m:queue_,_to"
+     },
+     {
+      "label": "bus",
+      "say": "bus",
+      "category": "noun",
+      "picture": "m:bus"
+     },
+     {
+      "label": "car",
+      "say": "car",
+      "category": "noun",
+      "picture": "m:car"
+     },
+     {
+      "label": "walk",
+      "say": "walk",
+      "category": "verb",
+      "picture": "m:walk_,_to"
+     },
+     {
+      "label": "mom",
+      "say": "mom",
+      "category": "pronoun",
+      "picture": "m:mum_parent"
+     },
+     {
+      "label": "dad",
+      "say": "dad",
+      "category": "pronoun",
+      "picture": "m:dad_parent"
+     },
+     {
+      "label": "grandma",
+      "say": "grandma",
+      "category": "pronoun",
+      "picture": "m:grandmother"
+     }
+    ]
+   }
+  },
+  {
+   "key": "sensory",
+   "name": "Sensory needs",
+   "blurb": "Too loud, too bright, and what helps.",
+   "status": "draft",
+   "notes": "Core words are in the same squares as on the core-word board (top left). Picture for lights off: Mulberry \"turn down light\". Picture for fidget toy: OpenMoji yo-yo: neither set has a fidget spinner or squishy toy.",
+   "review": null,
+   "board": {
+    "title": "Sensory needs",
+    "rows": 4,
+    "cols": 7,
+    "showSentence": true,
+    "showColors": false,
+    "cells": [
+     {
+      "label": "I",
+      "say": "I",
+      "category": "pronoun",
+      "picture": "o:1F64B-1F3FC"
+     },
+     {
+      "label": "want",
+      "say": "want",
+      "category": "verb",
+      "picture": "m:want_,_to"
+     },
+     {
+      "label": "see",
+      "say": "see",
+      "category": "verb",
+      "picture": "m:look_,_to"
+     },
+     {
+      "label": "in",
+      "say": "in",
+      "category": "place",
+      "picture": "m:in"
+     },
+     {
+      "label": "more",
+      "say": "more",
+      "category": "describe",
+      "picture": "m:more"
+     },
+     {
+      "label": "too loud",
+      "say": "too loud",
+      "category": "describe",
+      "picture": "o:1F50A"
+     },
+     {
+      "label": "too bright",
+      "say": "too bright",
+      "category": "describe",
+      "picture": "m:bright"
+     },
+     {
+      "label": "you",
+      "say": "you",
+      "category": "pronoun",
+      "picture": "o:1FAF5-1F3FC"
+     },
+     {
+      "label": "put",
+      "say": "put",
+      "category": "verb",
+      "picture": "m:put_,_to"
+     },
+     {
+      "label": "help",
+      "say": "help",
+      "category": "verb",
+      "picture": "m:help_,_to"
+     },
+     {
+      "label": "on",
+      "say": "on",
+      "category": "place",
+      "picture": "m:on"
+     },
+     {
+      "label": "finished",
+      "say": "finished",
+      "category": "describe",
+      "picture": "m:finish"
+     },
+     {
+      "label": "too hot",
+      "say": "too hot",
+      "category": "describe",
+      "picture": "o:1F975"
+     },
+     {
+      "label": "too cold",
+      "say": "too cold",
+      "category": "describe",
+      "picture": "o:1F976"
+     },
+     {
+      "label": "he, she, it",
+      "say": "he, she, it",
+      "category": "pronoun",
+      "picture": "o:1F46B-1F3FC"
+     },
+     {
+      "label": "turn",
+      "say": "turn",
+      "category": "verb",
+      "picture": "m:turn_,_to"
+     },
+     {
+      "label": "Go",
+      "say": "go",
+      "category": "verb",
+      "picture": "m:go_,_to"
+     },
+     {
+      "label": "Stop",
+      "say": "stop",
+      "category": "verb",
+      "picture": "o:1F6D1"
+     },
+     {
+      "label": "no/not",
+      "say": "no",
+      "category": "neutral",
+      "picture": "m:mistake_no_wrong"
+     },
+     {
+      "label": "headphones",
+      "say": "headphones",
+      "category": "noun",
+      "picture": "m:headphones"
+     },
+     {
+      "label": "lights off",
+      "say": "lights off",
+      "category": "verb",
+      "picture": "m:turn_down_light_,_to"
+     },
+     {
+      "label": "chew",
+      "say": "chew",
+      "category": "verb",
+      "picture": "m:chewy_tube"
+     },
+     {
+      "label": "fidget toy",
+      "say": "fidget toy",
+      "category": "noun",
+      "picture": "o:1FA80"
+     },
+     {
+      "label": "blanket",
+      "say": "blanket",
+      "category": "noun",
+      "picture": "m:blanket"
+     },
+     {
+      "label": "move",
+      "say": "move",
+      "category": "verb",
+      "picture": "m:move_,_to"
+     },
+     {
+      "label": "jump",
+      "say": "jump",
+      "category": "verb",
+      "picture": "m:jump_,_to"
+     },
+     {
+      "label": "squeeze",
+      "say": "squeeze",
+      "category": "verb",
+      "picture": "m:squeeze_,_to"
+     },
+     {
+      "label": "quiet place",
+      "say": "quiet place",
+      "category": "noun",
+      "picture": "m:quiet"
+     }
+    ]
+   }
+  }
+ ]
+}
