@@ -349,7 +349,7 @@ async function start() {
   document.documentElement.dataset.ready = 'true'
 }
 start().catch((err) => {
-  $('status').textContent = `The review sheet could not load: ${err.message}. Open it through the board maker's web server.`
+  $('status').textContent = `The review sheet could not load: ${err.message}. Open it through Talk Boards' web server.`
   $('status').classList.add('warn')
 })
 </script>

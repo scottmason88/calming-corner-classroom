@@ -1,5 +1,5 @@
 {
- "about": "Topic starter boards for the board maker. Drafted with AI, pictures chosen by hand from library/index.json, and reviewed by a teacher with review.html. Only \"approved\" topics have been checked by a teacher.",
+ "about": "Topic starter boards for Talk Boards. Drafted with AI, pictures chosen by hand from library/index.json, and reviewed by a teacher with review.html. Only \"approved\" topics have been checked by a teacher.",
  "core": {
   "notes": "These 15 squares match the classroom core-word board. Please check the picture for \"you\" (OpenMoji \"index pointing at the viewer\"): a reviewer said it can read as a fist. It is on every topic board, so if it should change, it changes everywhere at once."
  },

@@ -1,4 +1,4 @@
-// Board Maker: builds tap-to-talk boards in the browser and downloads each one
+// Talk Boards: builds tap-to-talk boards in the browser and downloads each one
 // as a single HTML file (board.html with the board's data, pictures and clips
 // embedded). Nothing is sent anywhere; work in progress stays in localStorage.
 import { CATEGORIES, COLOR_ROW, TEMPLATES, emptyCell, fromTemplate } from './templates.js'
@@ -75,7 +75,7 @@ function save() {
     const full = err?.name === 'QuotaExceededError' || err?.code === 22 || err?.code === 1014
     setStatus(full
       ? 'This board is too big to save in the browser. Download it to keep it.'
-      : 'This browser is not letting the board maker save (a private window, or saving is blocked). Download the board to keep it.', true)
+      : 'This browser is not letting Talk Boards save (a private window, or saving is blocked). Download the board to keep it.', true)
   }
   showNotice()
 }
@@ -198,7 +198,7 @@ async function boardData(embed, problems = { clips: [], pictures: [] }) {
   }
   const draft = draftTopic()
   return {
-    version: 1, maker: 'Calming Corner board maker', title: board.title, rows: board.rows, cols: board.cols,
+    version: 1, maker: 'Calming Corner Talk Boards', title: board.title, rows: board.rows, cols: board.cols,
     showSentence: board.showSentence, showColors: board.showColors, cells, colors, assets: { pictures, clips },
     ...(draft ? { note: topicStatus(draft) === 'needs-changes' ? 'Topic starter that a teacher asked to change' : DRAFT_NOTE } : {}),
   }
@@ -587,7 +587,7 @@ $('open-file').addEventListener('change', async (e) => {
     changed()
     setStatus(`Opened ${file.name}.`)
   } catch {
-    setStatus('That file is not a board from the board maker.', true)
+    setStatus('That file is not a board from Talk Boards.', true)
   }
 })
 
@@ -722,4 +722,4 @@ async function start() {
   document.documentElement.dataset.ready = 'true'
 }
 
-start().catch((err) => setStatus(`Board Maker could not start: ${err.message}. Open it through a web server, not as a file.`, true))
+start().catch((err) => setStatus(`Talk Boards could not start: ${err.message}. Open it through a web server, not as a file.`, true))

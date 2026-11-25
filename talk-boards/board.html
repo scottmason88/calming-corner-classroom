@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="generator" content="Calming Corner board maker">
+<meta name="generator" content="Calming Corner Talk Boards">
 <title>Talk Board</title>
 <!--
-  A tap-to-talk board made with the Calming Corner board maker.
+  A tap-to-talk board made with Calming Corner Talk Boards.
   Everything it needs (pictures, voice clips and the board itself) is inside
   this one file, so it works offline. The board's data is the JSON in the
-  "board-data" script below; open this file in the board maker to edit it.
+  "board-data" script below; open this file in Talk Boards to edit it.
 -->
 <style>
   :root {
@@ -190,7 +190,7 @@
   .credit { flex: 1; min-width: 0; color: #8a939d; text-align: right; }
   .credit a { color: inherit; }
 
-  /* Inside the board maker: tap a cell to edit it. */
+  /* Inside Talk Boards: tap a cell to edit it. */
   body.editing .word { cursor: pointer; }
   body.editing .word.empty::after {
     content: "+"; position: absolute; inset: 6px; display: grid; place-items: center;
@@ -247,7 +247,7 @@
 
 <script type="application/json" id="board-data">null</script>
 <script>
-/* Fitzgerald-style colour key. The board maker uses the same keys. */
+/* Fitzgerald-style colour key. Talk Boards uses the same keys. */
 var CATEGORY_COLORS = {
   pronoun: '#f8efae', verb: '#d8eed3', describe: '#cde4f6', noun: '#fde0c2', place: '#e6def1',
   social: '#f9d3e3', question: '#d9c8ef', negative: '#f6c6c3', neutral: '#ffffff'
@@ -259,7 +259,7 @@ var CREDITS = {
 
 var DATA = JSON.parse(document.getElementById('board-data').textContent) || {
   title: 'Talk Board', rows: 1, cols: 1, showSentence: true, showColors: false,
-  cells: [{ label: 'Open me in the board maker' }], colors: [], assets: {}
+  cells: [{ label: 'Open me in Talk Boards' }], colors: [], assets: {}
 };
 var ASSETS = DATA.assets || {};
 var PICTURES = ASSETS.pictures || {};
@@ -269,7 +269,7 @@ var editing = false;
 function isColor(s) { return typeof s === 'string' && /^#[0-9a-f]{3,8}$/i.test(s); }
 function pictureSrc(id) {
   var src = id && PICTURES[id];
-  /* Embedded pictures, or library files while previewing in the board maker. */
+  /* Embedded pictures, or library files while previewing in Talk Boards. */
   return typeof src === 'string' && /^(data:image\/|library\/)/.test(src) ? src : null;
 }
 
@@ -557,7 +557,7 @@ if (window.matchMedia) {
 }
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 
-/* Messages from the board maker when this board is previewed inside it. */
+/* Messages from Talk Boards when this board is previewed inside it. */
 if (window.parent !== window) {
   window.addEventListener('message', function (e) {
     if (e.source !== window.parent) return;

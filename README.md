@@ -1,9 +1,9 @@
 # Calming Corner Classroom Tools
 
-The published copy of two classroom tools from Calming Corner:
+The published copy of the Calming Corner classroom tools:
 
-- **Board Maker** (`board-maker/`): makes tap-to-talk boards and downloads each one as a single offline file.
-- **Book Buttons** (`book-maker/`): talking picture buttons for adapted books, in a floating window over the activity.
+- **Calming Corner Talk Boards** (`talk-boards/`): makes tap-to-talk boards and downloads each one as a single offline file.
+- **Calming Corner Book Buttons** (`book-buttons/`): talking picture buttons for adapted books, in a floating window over the activity.
 
 Live site: https://scottmason88.github.io/calming-corner-classroom/
 

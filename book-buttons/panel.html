@@ -286,7 +286,7 @@
 <script type="application/json" id="panel-assets">null</script>
 <script>
 'use strict';
-/* Talking buttons for a classroom activity, made with the Calming Corner book maker.
+/* Talking buttons for a classroom activity, made with the Calming Corner Book Buttons.
    The activity itself (Google Slides, PowerPoint, a PDF) keeps running in its own
    app; these buttons float over it in a picture-in-picture window, or sit beside
    it on this page. Everything is inside this one file: no network, no tracking. */
@@ -658,7 +658,7 @@ function buildPrint() {
 /* ---------- start ---------- */
 function start() {
   if (!DATA || DATA.format !== 'calm-buttons' || !Array.isArray(DATA.sets)) {
-    document.body.innerHTML = '<p style="padding:24px;font-size:20px">These buttons have no data yet. Open the file in the book maker.</p>';
+    document.body.innerHTML = '<p style="padding:24px;font-size:20px">These buttons have no data yet. Open the file in Book Buttons.</p>';
     return;
   }
   document.title = DATA.title || 'Talking buttons';
@@ -687,7 +687,7 @@ function start() {
   document.addEventListener('keydown', keys);
   document.addEventListener('contextmenu', (e) => e.preventDefault());
   window.addEventListener('resize', arrange);
-  /* The book maker's preview asks for a set. */
+  /* Book Buttons' preview asks for a set. */
   window.addEventListener('message', (e) => {
     const m = e.data || {};
     if (m.type === 'calm-buttons:set' && Number.isInteger(m.index)) showSet(Math.max(0, views().findIndex((v) => v.s === m.index)));

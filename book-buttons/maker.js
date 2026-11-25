@@ -1,4 +1,4 @@
-// Book Maker: talking buttons that float over a teacher's adapted book or
+// Book Buttons: talking buttons that float over a teacher's adapted book or
 // activity. The activity itself (Google Slides, PowerPoint, a PDF viewer) is
 // never opened, changed or uploaded here: pictures come from a frozen screen
 // grab of it, or from the picture library. The result downloads as one HTML
@@ -25,7 +25,7 @@ const PICTURE_SIZE = 512
 const GRAB_WAIT = 2000
 const CREDITS = 'Pictures: Mulberry Symbols by Steve Lee and OpenMoji, both CC BY-SA 4.0'
 
-/* Fitzgerald-style colour key: the same keys and colours as the classroom board and board maker. */
+/* Fitzgerald-style colour key: the same keys and colours as the classroom board and Talk Boards. */
 export const CATEGORIES = [
   { key: 'pronoun', name: 'People', hint: 'I, you, mum', color: '#f8efae' },
   { key: 'verb', name: 'Actions', hint: 'put on, take off', color: '#d8eed3' },
@@ -1126,13 +1126,13 @@ function watchOtherTabs() {
     channel.onmessage = (e) => {
       if (e.data === 'hello') channel.postMessage('here')
       if (e.data === 'hello' || e.data === 'here') {
-        setStatus('The book maker is also open in another tab. Close one of them: changes in one tab overwrite the other.', true)
+        setStatus('Book Buttons is also open in another tab. Close one of them: changes in one tab overwrite the other.', true)
       }
     }
     channel.postMessage('hello')
   } catch { /* no BroadcastChannel: nothing to warn about */ }
 }
-start().catch((err) => setStatus(`Book Maker could not start: ${err.message}. Open it through a web server, not as a file.`, true))
+start().catch((err) => setStatus(`Book Buttons could not start: ${err.message}. Open it through a web server, not as a file.`, true))
 
 /* For the tests. */
 window.bookMaker = { get activity() { return act }, saved: () => saving }
