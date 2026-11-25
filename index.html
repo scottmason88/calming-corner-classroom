@@ -20,6 +20,12 @@
   .tool p { margin: 0; color: var(--soft); }
   .more { margin-top: 28px; color: var(--soft); }
   .more a { color: var(--accent); }
+  .install { margin-top: 40px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .install h2 { margin: 0 0 12px; font-size: 22px; }
+  .install li { margin: 6px 0; }
+  .install code { font-size: 15px; background: var(--page); padding: 1px 5px; border-radius: 5px; }
+  .button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 10px 18px; border-radius: 10px; }
+  @media (prefers-color-scheme: dark) { .button { color: #10151c; } }
   footer { margin-top: 40px; font-size: 13px; color: var(--soft); }
   footer a { color: inherit; }
 </style>
@@ -37,8 +43,27 @@
       <h2>Book Buttons</h2>
       <p>Make talking picture buttons for an adapted book, using pictures from the book, in a window that floats over the activity.</p>
     </a>
+    <a class="tool" href="#talking-buttons">
+      <h2>Talking Buttons</h2>
+      <p>A Chrome and Edge extension that puts talking picture buttons right on top of a Google Slides activity, without changing the file.</p>
+    </a>
   </div>
   <p class="more">Teachers checking the topic boards: <a href="board-maker/review.html">open the review sheet</a>.</p>
+
+  <section id="talking-buttons" class="install">
+    <h2>Talking Buttons extension</h2>
+    <p><a class="button" href="downloads/talking-buttons-0.9.0.zip" download>Download Talking Buttons (version 0.9.0, 16 MB)</a></p>
+    <p>It isn't in the Chrome Web Store yet, so for now it's installed by hand. This works on a home computer. School computers usually block step 4. There, ask IT to install it for you.</p>
+    <ol>
+      <li>Download the file above and open it. That unzips it into a folder named <code>talking-buttons-0.9.0</code>. Keep that folder somewhere it won't be deleted, such as Documents.</li>
+      <li>In Chrome, go to <code>chrome://extensions</code>. In Edge, go to <code>edge://extensions</code>.</li>
+      <li>Turn on <strong>Developer mode</strong>.</li>
+      <li>Click <strong>Load unpacked</strong> and choose the unzipped folder.</li>
+      <li>Click the puzzle-piece icon in the toolbar and pin <strong>Calming Corner Talking Buttons</strong>.</li>
+      <li>Open a Google Slides activity. A small round handle appears in the bottom-right corner. Hold it, or click the toolbar icon, to add buttons.</li>
+    </ol>
+    <p>The extension makes no internet connections and collects nothing. Buttons are saved only in that browser.</p>
+  </section>
   <footer>
     Pictures: <a href="https://mulberrysymbols.org">Mulberry Symbols</a> by Steve Lee and <a href="https://openmoji.org">OpenMoji</a>, both
     <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Voice from Calming Corner.
